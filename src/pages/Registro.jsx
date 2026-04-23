@@ -9,6 +9,8 @@ const Registro = () => {
     const [password, setPassword] = useState("");
     /* const [errors, setErrors] = useState("") */
 
+    const URL_REGISTRO = import.meta.env.VITE_APP_REGISTRO_USER;
+
     // Función para manejar el reseteo manual de los estados
     const handleLimpiarDatos = () => {
         setNombre("");
@@ -29,7 +31,7 @@ const Registro = () => {
 
         // 2. Envío el objeto al Backend
         try {
-            const result = await axios.post('http://localhost:8080/api/usuarios/registro', persona);
+            const result = await axios.post(`${URL_REGISTRO}`, persona);
             
             // 3. Si todo sale bien, mostramos un mensaje de éxito
             alert(result.data.message || "¡Registro exitoso!");
