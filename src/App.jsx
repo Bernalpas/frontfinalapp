@@ -13,6 +13,7 @@ import Footer from './componente/Footer'
 import Productos from './pages/Formulario'
 import Registro from './pages/Registro'
 import PropsVarios from './pages/PropsVarios'
+import ApiStore from './pages/ApiStore'
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Route path='/productos' element={<Productos />} />
         <Route path='/registro' element={<Registro />} />
         <Route path='/props' element={<PropsVarios />} />
+        <Route path='/apiStore' element={<ApiStore />} />
         <Route path='/old' element={<OldApp />} />
       </Routes>
       

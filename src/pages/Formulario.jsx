@@ -7,6 +7,7 @@ import Row from 'react-bootstrap/Row';
 
 import { useState } from 'react';
 import axios from "axios"
+import Swal from 'sweetalert2'; 
 
 function Formulario() {
 
@@ -34,6 +35,11 @@ function Formulario() {
             const response = await axios.post(`${URL_PRODUCTO}`, producto)
 
             console.log(response);
+            Swal.fire({
+                icon: 'success',
+                title: 'Éxito',
+                text: response.data.message,
+            })            
             
         } catch (error) {
             console.log(error);

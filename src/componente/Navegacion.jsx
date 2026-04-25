@@ -17,6 +17,7 @@ function Navegacion() {
             <Nav.Link href="/login">Login</Nav.Link>
             <Nav.Link href="/productos">Productos</Nav.Link>
             <Nav.Link href="/props">Props Varios</Nav.Link>
+            <Nav.Link href="/apiStore">Api Externa Store</Nav.Link>
             <Nav.Link href="/old">Old App</Nav.Link>
           </Nav>
         </Navbar.Collapse>
