@@ -14,11 +14,14 @@ import Productos from './pages/Formulario'
 import Registro from './pages/Registro'
 import PropsVarios from './pages/PropsVarios'
 import ApiStore from './pages/ApiStore'
+import NuestrosProductos from './pages/NuestrosProductos'
+import Carrito from './pages/Carrito'
+import { CarritoProvider } from './context/CarritoContext'
 
 
 function App() {
   return (
-    <>
+    <CarritoProvider>
       <Navegacion />
 
       <Routes>
@@ -28,11 +31,13 @@ function App() {
         <Route path='/registro' element={<Registro />} />
         <Route path='/props' element={<PropsVarios />} />
         <Route path='/apiStore' element={<ApiStore />} />
+        <Route path='/nuestros-productos' element={<NuestrosProductos />} />
+        <Route path='/carrito' element={<Carrito />} />
         <Route path='/old' element={<OldApp />} />
       </Routes>
       
       <Footer />
-    </>
+    </CarritoProvider>
   )
 }
 
